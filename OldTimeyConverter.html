@@ -1,0 +1,74 @@
+<html>
+ <head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap"
+rel="stylesheet">
+<style>
+body
+{
+background-color: #ffffcc;
+font-family:'Yusei Magic', sans-serif;
+}
+</style>
+  <script>
+   function Forelongs()
+   {
+     var x = document.getElementById('num').value;
+     x = parseInt(x);
+     var y = document.getElementById('end').value;
+     y = parseInt(y);
+     var num = "Miles to Forelongs <br><hr> Miles ------- Forelongs <br>";
+     var res = 0;
+     for(var i = x; i <= y; i++)
+     {
+      res = i * 8;
+      num = num + i + " ----------- " + res + "<br>";
+     }
+     document.getElementById("result").innerHTML = num;
+   }
+   function Slugs()
+   {
+     var x = document.getElementById('num').value;
+     x = parseInt(x);
+     var y = document.getElementById('end').value;
+     y = parseInt(y);
+     var num = "Pounds to Slugs <br><hr> Pounds ------- Slugs <br>";
+     var res = 0;
+     for(var i = x; i <= y; i++)
+     {
+      res = i * 32.174;
+      num = num + i + " ------------- " + res + "<br>";
+     }
+     document.getElementById("result").innerHTML = num;
+   }
+   function Fortnites()
+   {
+     var x = document.getElementById('num').value;
+     x = parseInt(x);
+     var y = document.getElementById('end').value;
+     y = parseInt(y);
+     var num = "Days to FortNites <br><hr> Days ------- FortNites <br>";
+     var res = 0;
+     for(var i = x; i <= y; i++)
+     {
+      res = i * 14;
+      num = num + i + " ---------- " + res + "<br>";
+     }
+     document.getElementById("result").innerHTML = num;
+   }
+  </script>
+ </head>
+ <body>
+   <h1>You Have Died on The Orgeon Trail... Convert some units?</h1>
+   <br>
+   <p>Start vaule</p><img src = "Trailer.jpg" width="150px" height="150px" style="float:right"> <br><br>
+   <input type = "text" id = "num"><br>
+   <p>End Value</p><br>
+   <input type = "text" id = "end"><br><br>
+   <input type = "button" value = "Miles to Forelongs" onclick = "Forelongs()">
+   <input type = "button" value = "Pounds to Slugs" onclick = "Slugs()">
+   <input type = "button" value = "Days to FortNites" onclick = "Fortnites()">
+   <br><hr><br>
+   <p id = "result"></p>
+ </body>
+</html>
